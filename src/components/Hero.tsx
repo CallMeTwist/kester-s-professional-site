@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { TechParticles } from "./TechParticles";
-import { ImageSlot }     from "./ImageSlot";
+import { ImageSlot } from "./ImageSlot";
 import { C, HERO_STATS } from "@/data/portfolio";
 
 const scrollToSection = (id: string) =>
@@ -11,8 +11,8 @@ export const Hero = () => {
 
   // Parallax — desktop only (mobile uses CSS to turn off)
   const textY = useTransform(scrollY, [0, 600], [0, -80]);
-  const imgY  = useTransform(scrollY, [0, 600], [0,  60]);
-  const fade  = useTransform(scrollY, [0, 350], [1,   0]);
+  const imgY = useTransform(scrollY, [0, 600], [0, 60]);
+  const fade = useTransform(scrollY, [0, 350], [1, 0]);
 
   return (
     <>
@@ -141,13 +141,37 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 1.15 }}
             style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}
           >
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
               onClick={() => scrollToSection("experience")}
               style={{ background: C.amber, color: C.bg, border: "none", padding: "12px 26px", cursor: "pointer", fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 500 }}
             >
               View Experience
-            </motion.button>
+            </motion.button> */}
+
+            <motion.a
+              href="/Kester-Eluke-CV.pdf"
+              download
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              style={{
+                background: C.amber,
+                color: C.bg,
+                border: "none",
+                padding: "12px 26px",
+                cursor: "pointer",
+                fontFamily: "'IBM Plex Mono', monospace",
+                fontSize: 10,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                fontWeight: 500,
+                textDecoration: "none",
+                display: "inline-block"
+              }}
+            >
+              Download CV
+            </motion.a>
+
             <motion.button
               whileHover={{ scale: 1.04, borderColor: C.cream, color: C.cream }} whileTap={{ scale: 0.96 }}
               onClick={() => scrollToSection("contact")}
@@ -281,13 +305,28 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 1.25 }}
             style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
           >
-            <motion.button
-              whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
-              onClick={() => scrollToSection("experience")}
-              style={{ background: C.amber, color: C.bg, border: "none", padding: "13px 30px", cursor: "pointer", fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 500 }}
+            <motion.a
+              href="/Kester-Eluke-CV.pdf"
+              download
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              style={{
+                background: C.amber,
+                color: C.bg,
+                border: "none",
+                padding: "12px 26px",
+                cursor: "pointer",
+                fontFamily: "'IBM Plex Mono', monospace",
+                fontSize: 10,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                fontWeight: 500,
+                textDecoration: "none",
+                display: "inline-block"
+              }}
             >
-              View Experience
-            </motion.button>
+              Download CV
+            </motion.a>
             <motion.button
               whileHover={{ scale: 1.04, borderColor: C.cream, color: C.cream }} whileTap={{ scale: 0.96 }}
               onClick={() => scrollToSection("contact")}
