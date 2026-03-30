@@ -150,7 +150,7 @@ export const Hero = () => {
             </motion.button> */}
 
             <motion.a
-              href="/Kester-Eluke-CV.pdf"
+              href="/Kester Eluke CV.pdf"
               download
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
@@ -306,7 +306,7 @@ export const Hero = () => {
             style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
           >
             <motion.a
-              href="/Kester-Eluke-CV.pdf"
+              href="/Kester Eluke CV.pdf"
               download
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
